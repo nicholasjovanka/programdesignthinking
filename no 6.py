@@ -5,9 +5,8 @@ def overlapping():
         for j in b:
             if i==j:
                 return True
-
     else:
-          return False
+        return False
 
 print(overlapping())
 
