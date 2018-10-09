@@ -3,6 +3,7 @@ import pygame
 from bullet import Bullet
 from alien import Alien
 from time import sleep
+import pygame.mixer
 
 def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
      if stats.ships_left > 0:
@@ -32,6 +33,8 @@ def check_keydown_events(event,ai_settings, screen, ship, bullets):
           ship.moving_left = True
      elif event.key == pygame.K_SPACE:
           fire_bullet(ai_settings, screen, ship, bullets)
+          pygame.mixer.music.load('sound.wav')
+          pygame.mixer.music.play(0)
      elif event.key == pygame.K_q:
           sys.exit()
 
