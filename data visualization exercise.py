@@ -37,7 +37,7 @@ hist.title = "Steps per day"
 hist.x_title = "date"
 hist.y_title = "Number of steps per day"
 hist.add('Steps per day', steps_per_day)
-hist.render_to_file('die_visual.svg')
+hist.render_to_file('no_1.svg')
 sum=0
 lenght=day.__len__()
 print(lenght)
@@ -49,7 +49,7 @@ print("the mean"+" "+str(mean))
 newlist=[]
 for j in sorted(steps_per_day):
     newlist.append(j)
-print(newlist[30])
+print(newlist[int(len(newlist)/2)])
 
 
 
